@@ -6,6 +6,7 @@ export default function Home() {
   const [ageVerify, setAgeVerify] = useState<null | String>(null);
   const [loading, setLoading] = useState(true);
   const [blurb, setBlurb] = useState('');
+  const [naked, setNaked] = useState(false);
   const blurbs = [
     'This is literally just a refactored Next.js start page.',
     'This website is a designated smoking area.',
@@ -29,18 +30,14 @@ export default function Home() {
           Hold the freaking phone . . .
         </div>
         <div>
-          Hey! We think you're pretty rad, but you have to be 18+ to visit this
+          Hey, we think you're pretty rad, but you have to be 18+ to visit this
           site. This is because it includes graphic depictions of gay mice
           having &#128293;hot&#128293; gay sex. For example, it includes a
           sequence of images where one gay mouse conducts his penis into another
-          gay mouse's anus and proceeds to perform anal sexual intercourse until
-          he has an orgasm and ejaculates warm semen into the other mouse's
-          rectum. Another example is a sequence of events where a group of gay
-          mice encircle one gay mouse and take turns masturbating and
-          ejaculating semen, warm semen, into the center mouse's mouth while
-          said mouse swallows it. If you are under 18 or uncomfortable with such
-          content, then we must ask you, during the Biden era, to depart from
-          this website.
+          gay mouse's anus and proceeds to perform sexual intercourse until he
+          has an orgasm and ejaculates warm semen into the other mouse's rectum.
+          If you are under 18 or uncomfortable with such content during the
+          Biden era, then we must ask you to depart from this website.
         </div>
         <div className="items-center text-xl pt-12">Are you 18?</div>
         <button
@@ -70,30 +67,25 @@ export default function Home() {
         <div className="mb-3 text-2xl font-semibold">Ope. Sorry.</div>
         <div>
           At least you can enjoy this page where the mousies have their clothes
-          on. And look! Tristan made cookies! Now that's something everyone can
+          on. And look! He made cookies! Now that's something everyone can
           enjoy!
         </div>
         <div>insert image</div>
         <div>
-          Rest assured, the mousies think you're pretty swell and would love to
-          spend time with you once you're 18.
+          Rest assured, the mousies still think you're pretty swell and would
+          love to spend time with you once you're 18.
         </div>
       </main>
     );
   } else {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <main className="flex min-h-screen flex-col items-center justify-between p-12">
         <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
           <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
             {blurb}
           </p>
           <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-            <a
-              className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <div className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0">
               Muffin Mousies{' '}
               <Image
                 src="/heart.svg"
@@ -103,7 +95,7 @@ export default function Home() {
                 height={24}
                 priority
               />
-            </a>
+            </div>
           </div>
         </div>
 
@@ -120,10 +112,8 @@ export default function Home() {
 
         <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
           <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            href="mousies"
             className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <h2 className={`mb-3 text-2xl font-semibold`}>Mousies</h2>
             <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
@@ -132,42 +122,48 @@ export default function Home() {
           </a>
 
           <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="read"
             className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
           >
-            <h2 className={`mb-3 text-2xl font-semibold`}>Comics</h2>
+            <h2 className={`mb-3 text-2xl font-semibold`}>Read</h2>
             <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-              Watch the mousies get into a little trouble ;3
+              Comics and stories about love and pasteries.
             </p>
           </a>
 
           <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            href="https://www.subscribestar.com/muffin-mousies"
             className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className={`mb-3 text-2xl font-semibold`}>Sponsor</h2>
+            <h2 className={`mb-3 text-2xl font-semibold`}>Subscribe Star</h2>
             <span className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-              Financially support the mousies{' '}
+              Financially support the mousies and receive exclusive content!
             </span>
-
-            <span className="opacity-100">&#128591;</span>
           </a>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
+          <div
+            className="group hover:cursor-pointer rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            onClick={() => setNaked(!naked)}
           >
-            <h2 className={`mb-3 text-2xl font-semibold`}>Naked!</h2>
-            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-              Click for a surprise!
-            </p>
-          </a>
+            {!naked && (
+              <>
+                <h2 className={`mb-3 text-2xl font-semibold`}>Naked!</h2>
+                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+                  Click for a surprise!
+                </p>
+              </>
+            )}
+            {naked && (
+              <>
+                <h2 className={`mb-3 text-2xl font-semibold`}>Put it back!</h2>
+                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+                  Aaaaaaaahhhhhh!!!!!
+                </p>
+              </>
+            )}
+          </div>
         </div>
       </main>
     );
