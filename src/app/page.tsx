@@ -102,7 +102,7 @@ export default function Home() {
 
         <div className="relative flex place-items-center">
           <Image
-            className="relative dark:drop-shadow-[0_0_0.9rem_#ffffff] dark:opacity-90 dark:contrast-125 dark:backdrop-sepia"
+            className="relative dark:drop-shadow-[0_0_0.9rem_#ffffff] dark:opacity-90 dark:contrast-125"
             src={naked ? '/homepage-1-n.png' : '/homepage-1.png'}
             alt="mousies"
             width={800}
