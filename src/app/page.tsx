@@ -92,7 +92,7 @@ export default function Home() {
                 src="/heart.svg"
                 alt="Heart"
                 className="dark:invert"
-                width={25}
+                width={24}
                 height={24}
                 priority
               />

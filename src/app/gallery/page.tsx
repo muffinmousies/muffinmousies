@@ -1,9 +1,19 @@
 'use client';
-
 import Image from 'next/image';
 import GalleryCard from '@/components/GalleryCard';
+import { useEffect, useState } from 'react';
 export default function Gallery() {
-  function generateGallery() {}
+  const [images, setImages] = useState<string[]>([]);
+  useEffect(() => {
+    fetch('/api/b1/gallery').then((res) => {
+      res.json().then((data) => {
+        setImages(data);
+      });
+    });
+  }, []);
+  if (images.length === 0) {
+    return <></>;
+  }
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-12">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex lg:pb-0 pb-12">
@@ -17,20 +27,17 @@ export default function Gallery() {
               src="/heart.svg"
               alt="Heart"
               className="dark:invert"
-              width={25}
+              width={24}
               height={24}
               priority
             />
           </div>
         </div>
       </div>
-      <GalleryCard src="/homepage-1.png"></GalleryCard>
-      <GalleryCard src="/homepage-1.png"></GalleryCard>
-      <GalleryCard src="/homepage-1.png"></GalleryCard>
-      <GalleryCard src="/homepage-1.png"></GalleryCard>
-      <GalleryCard src="/homepage-1.png"></GalleryCard>
-      <GalleryCard src="/homepage-1.png"></GalleryCard>
-      <GalleryCard src="/homepage-1.png"></GalleryCard>
+      {images &&
+        images.map((image) => (
+          <GalleryCard key={image} src={image}></GalleryCard>
+        ))}
     </main>
   );
 }
