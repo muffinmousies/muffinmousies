@@ -5,7 +5,7 @@ export default function GalleryCard(props: { src: string }) {
       <Image
         src={props.src}
         alt="Image"
-        className="dark:drop-shadow-[0_0_0.9rem_#ffffff] dark:opacity-90 dark:contrast-125"
+        className="dark:drop-shadow-[0_0_0.9rem_#ffffff] dark:opacity-90 dark:contrast-125 max-h-screen w-auto"
         width={1500}
         height={1500}
         priority

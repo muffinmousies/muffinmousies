@@ -8,7 +8,6 @@ export default function Home() {
   const [blurb, setBlurb] = useState('');
   const [naked, setNaked] = useState(false);
   const blurbs = [
-    'This is literally just a refactored Next.js start page.',
     'This website is a designated smoking area.',
     'Boy mice getting fricked!',
   ];
